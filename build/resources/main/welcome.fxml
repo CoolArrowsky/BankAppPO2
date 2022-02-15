@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" stylesheets="@styles/stylingMain.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="put.bankapp.controller.WelcomeController">
+   <children>
+      <GridPane layoutX="301.0" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="321.0" prefWidth="301.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="479.99999237060547" minWidth="10.0" prefWidth="238.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="buttonLogin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionLog" stylesheets="@styles/stylingMain.css" text="Zaloguj się">
+                     <font>
+                        <Font name="Calibri" size="29.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonRegister" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionRegister" stylesheets="@styles/stylingMain.css" text="Utwórz konto">
+                     <font>
+                        <Font name="Calibri" size="29.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <PasswordField fx:id="textFieldPIN" promptText="Numer PIN" style="-fx-background-color: #9999;" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </PasswordField>
+            <Separator prefWidth="200.0" GridPane.rowIndex="3" />
+            <TextField fx:id="textFieldCard" promptText="Numer karty" style="-fx-background-color: #9999;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <AnchorPane opacity="0.64" prefHeight="200.0" prefWidth="200.0" styleClass="smallText" stylesheets="@styles/stylingComponents.css" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="informationLabel" layoutX="14.0" layoutY="12.0" textFill="#704b4b" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Pane layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="301.0" style="-fx-background-color: #2137;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/menus/exit.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="70.0" layoutY="46.0" onMouseClicked="#exitOnClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyjdź" wrappingWidth="56.13665771484375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Line endX="182.333251953125" endY="1.1444091796875E-5" layoutX="107.0" layoutY="62.0" startX="-100.0" />
+            <Text layoutX="8.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WITAMY W APLIKACJI BANKOWEJ">
+               <font>
+                  <Font name="Corbel" size="19.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

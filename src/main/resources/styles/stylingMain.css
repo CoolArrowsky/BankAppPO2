@@ -1,0 +1,21 @@
+.root {
+    -fx-base: #2137;
+    -fx-background: rgb(225, 228, 203);
+    -fx-focus-color: -fx-control-inner-background;
+    -fx-faint-focus-color: -fx-control-inner-background;
+}
+
+.button {
+    -fx-text-fill: rgb(225, 228, 203);
+    -fx-font-size: 16pt;
+    -fx-border-color: #2137;
+    -fx-border-radius: 1;
+}
+
+.borders {
+    -fx-border-color: rgb(103, 100, 78);
+    -fx-border-style: dotted;
+    -fx-border-width: 1.5;
+    -fx-border-insets: -5;
+}
+
